@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>下划线进入退出</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .title {
+        color: #333;
+        line-height: 2;
+      }
+      .title span {
+        /* 设置背景颜色
+           在退出的时候，背景宽度为0，背景颜色会从右向左移动
+        */
+        background: linear-gradient(to right, #f594f8, #2fe3f4) no-repeat right bottom;
+        background-size: 0 2px;
+        transition: all 1s;
+      }
+      .title span:hover {
+        /* 在进入的时候，背景宽度为100%，背景颜色会从左向右移动 */
+        background-position-x: left;
+        background-size: 100% 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="title">
+      <span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero amet non maiores asperiores labore pariatur,
+        corporis eos deleniti. Ducimus inventore placeat corrupti. Delectus molestiae minima, tempore maiores ad
+        deleniti quidem!
+      </span>
+    </h2>
+  </body>
+</html>
